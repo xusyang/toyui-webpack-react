@@ -1,9 +1,15 @@
-import './index.css'
 import ReactDOM from 'react-dom/client'
+import Home from './home'
+import './index.css'
 
 const App = (props) => {
   console.log(props)
-  return <div className="hello">hello world</div>
+  return (
+    <>
+      <Home />
+      <div className="hello">hello world</div>
+    </>
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('app'))

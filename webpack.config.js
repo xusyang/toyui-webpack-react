@@ -2,6 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: './src/index.jsx',
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   module: {
     rules: [
       {
@@ -9,7 +12,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.jsx$/,
+        test: /\.[j|t]sx$/,
         loader: 'babel-loader',
         options: {
           presets: [
@@ -19,6 +22,7 @@ module.exports = {
                 runtime: 'automatic',
               },
             ],
+            '@babel/preset-typescript',
           ],
         },
       },
