@@ -1,3 +1,5 @@
+import './home.less'
+
 export default () => {
-  return <div>HOME</div>
+  return <div className="home">HOME</div>
 }
