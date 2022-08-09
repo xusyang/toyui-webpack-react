@@ -1,7 +1,10 @@
 import './index.css'
+import ReactDOM from 'react-dom/client'
 
-const Component = () => {
+const App = (props) => {
+  console.log(props)
   return <div className="hello">hello world</div>
 }
 
-export default Component
+const root = ReactDOM.createRoot(document.getElementById('app'))
+root.render(<App name="Hello World" />)
